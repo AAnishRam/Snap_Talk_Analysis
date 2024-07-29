@@ -1,0 +1,469 @@
+.outer-box {
+  padding: 8vh;
+  background-color: #f1e4d5 !important;
+}
+
+.dashboard {
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  position: relative;
+  z-index: 1; /* Lower z-index */
+}
+
+.side-banner {
+  background-color: #f7f4f1;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  border-right: 0.1px solid #e9e6e5;
+  justify-content: space-evenly;
+}
+
+.side-banner__logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-banner__logo__p {
+  color: black;
+  font-family: "Courier New", monospace;
+  font-size: 2vh;
+  font-weight: 900;
+  text-align: center;
+  height: 5vh;
+}
+
+.side-banner__profile {
+  align-items: center;
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.side-banner__profile__logo {
+  border-radius: 50%;
+  width: 14vh;
+  height: 14vh;
+}
+
+.side-banner__profile__name {
+  color: black;
+  font-size: 2.5vh;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.side-banner__profile__rating {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.side-banner__profile__rating__item {
+  margin-left: 1.5vh;
+  margin-right: 1.5vh;
+}
+
+.side-banner__profile__rating__star {
+  color: gold;
+  font-size: 2vh;
+  margin-right: 5px;
+  margin-top: 0;
+}
+
+.side-banner__profile__rating__score {
+  font-size: 2vh;
+}
+
+.side-banner__contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-banner__item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+  width: 118px;
+}
+
+.side-banner__item:hover .side-banner__icon {
+  filter: invert(71%) sepia(40%) saturate(289%) hue-rotate(52deg)
+    brightness(98%) contrast(86%);
+  color: #a1c587;
+}
+
+.side-banner__item:hover {
+  font-weight: bolder;
+}
+
+.side-banner__icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.side-banner__item p {
+  color: black;
+  margin: 0;
+  font-size: 1em;
+}
+
+.side-banner__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-banner__footer__profiles {
+  width: max-content;
+  margin: 2vh;
+}
+
+.side-banner__footer__text__p {
+  font-family: "Courier New";
+  font-weight: bold;
+  text-align: center;
+  font-size: smaller;
+  margin-left: 18vh;
+  margin-right: 18vh;
+  width: 20vh;
+  font-weight: bold;
+  color: black;
+}
+
+/* second colunm design starts */
+
+.main-section {
+  background-color: #f7f4f1;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  border-right: 0.1px solid #e9e6e5;
+  padding-left: 10vh;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: -1; /* Lower z-index */
+}
+
+.main-section__search {
+  margin-top: 10.5vh;
+  display: flex;
+  flex-direction: row;
+  width: 50vh;
+  height: 6vh;
+}
+
+.side-banner__icon {
+  width: 2.4vh;
+  height: 2.4vh;
+}
+
+.main-section__search__input {
+  margin-left: 0.7vh;
+  border: none;
+  outline: none;
+  background-color: #f7f4f1;
+  font-size: large;
+  align-items: center;
+}
+
+.main-section__content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+}
+
+.main-section__content__h1 {
+  font-size: 6vh;
+  font-weight: 400;
+  width: 50vh;
+}
+
+.main-section__content__p {
+  width: 50vh;
+  margin-top: 1vh;
+  font-size: medium;
+}
+
+.main-section__content__button {
+  margin-top: 2vh;
+  width: 20vh;
+  color: white;
+  background-color: black;
+  border-radius: 4vh;
+  height: 5vh;
+}
+
+.main-section__categories {
+  margin-top: 6vh;
+  display: flex;
+  flex-direction: column;
+}
+.main-section__categories__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4vh;
+}
+
+.main-section__categories__title__h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.main-section__categories__title__img {
+  margin-right: 3vh;
+}
+
+.main-section__categories__title__img img {
+  margin: 0;
+  width: 4vh;
+  height: 3.5vh;
+}
+.main-section__categories__sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  margin-right: 3vh;
+}
+
+.main-section__categories__sections__box {
+  width: 15vh;
+  height: 15vh;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.main-section__categories__sections__box__heading__p {
+  font-size: small;
+  align-items: center;
+  color: black;
+  font-weight: 500;
+}
+
+.main-section__categories__sections__box__icon__img {
+  width: 6vh;
+  height: auto;
+}
+.main-section__footer {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+.main-section__footer__h1 {
+  margin-bottom: 1vh;
+}
+
+.main-section__footer__h1 {
+  font-size: 24px;
+  color: black;
+}
+
+.main-section__footer__graph {
+  display: flex;
+  flex-direction: row;
+  margin-right: 4vh;
+}
+
+.main-section__footer__graph__marks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 6vh;
+}
+
+.main-section__footer__graph__marks__yourPoints {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.main-section__footer__graph__marks__avgPoints {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.main-section__footer__graph__marks__yourPoints__num {
+  font-size: 3vh;
+  color: black;
+  text-align: center;
+}
+
+.main-section__footer__graph__marks__yourPoints__text {
+  font-size: 1.5vh;
+  text-align: center;
+}
+
+.main-section__footer__graph__marks__avgPoints__num {
+  font-size: 3vh;
+  color: black;
+  text-align: center;
+}
+
+.main-section__footer__graph__marks__avgPoints__text {
+  font-size: 1.5vh;
+  text-align: center;
+}
+
+/* third column */
+
+.feautures-section {
+  background-color: #ffffff;
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.feautures-section__header {
+  margin-top: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-right: 20%;
+}
+
+.feautures-section__header__notification-icon-div,
+.feautures-section__header__calendar-icon-div,
+.feautures-section__header__profile-div {
+  display: flex;
+  align-items: center;
+  margin-left: 10px; /* Add space between icons */
+}
+
+.feautures-section__header__notification-icon,
+.feautures-section__header__calendar-icon {
+  width: 3.5vh;
+  height: 3.5vh;
+}
+
+.feautures-section__header__profiles {
+  display: flex;
+  align-items: center;
+  margin-right: 5vh;
+}
+
+.feautures-section__calanedar {
+  margin-top: 7vh;
+}
+
+.feautures-section__webinars {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3vh;
+}
+
+.feautures-section__webinars__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 2vh;
+  padding: auto;
+}
+
+.feautures-section__webinars__title__h1 {
+  
+    margin: 0;
+    font-size: 24px;
+
+}
+
+.feautures-section__webinars__title__p2 {
+  margin-right: 3vh;
+  font-size: small;
+  color: black;
+}
+
+.feautures-section__webinars__names {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.feautures-section__webinars__names__icon {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 10px;
+}
+
+.feautures-section__webinars__names__title {
+  margin-left: 0;
+  font-size: 3vh;
+}
+
+.feautures-section__webinars__names__time {
+  margin-top: 0.8vh;
+  font-size: 1.5vh;
+}
+
+
+
+.event-table {
+    margin-left: 2vh;
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.icon-cell {
+    width: 5%;
+    padding: 10px;
+    text-align: center;
+}
+
+.icon-cell img {
+  margin-top: 2vh;
+    width: 20px;
+    height: 20px;
+    border-radius: 8px;
+}
+
+.text-cell {
+    width: 80%;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 2vh;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.details {
+    font-size: 1.5vh;
+    color: #666;
+}
+
+.duration-cell {
+    width: 20%;
+    padding: 10px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 2vh;
+    color: #666;
+}

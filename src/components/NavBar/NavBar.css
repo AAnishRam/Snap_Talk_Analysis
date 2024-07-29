@@ -1,0 +1,61 @@
+div {
+    display: block;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
+.navbar {
+    display: flex;
+    background: linear-gradient(180deg, #2f1f94 3.91%, #2f1f94);
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 10px 20px;
+    
+}
+
+img {
+    width: 350px;
+    height: 80px;
+}
+
+.skct-banner {
+    margin-right: 10px;
+    width: fit-content;
+}
+
+.header__menu-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    font-size: 1rem; 
+    line-height: 1.5rem; 
+    z-index: 2;
+    height:px;
+}
+
+.navbar__signin-text {
+    color: aliceblue;
+    margin-right: 15px; 
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar__signin-text:hover {
+    color: #ffcc00; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 5px; 
+    border-radius: 10px; 
+}
+
+
+.navbar__create-account {
+    height: auto;
+    margin: 5px; 
+}
+
+.navbar__create-account .btn {
+    padding: 5px 10px; 
+    font-size: 1rem; 
+}
