@@ -10,24 +10,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.User;
-import com.example.demo.service.UserService;
+import com.example.demo.model.AnalysisReport;
+import com.example.demo.service.AnalysisReportService;
 
 @RestController
-public class UserController {
-    @Autowired
-    UserService us;
+public class AnalysisReportController {
 
-    @PostMapping("/api/user")
-    public ResponseEntity<User> create(@RequestBody User ue) {
-        User obj = us.registerUser(ue);
-        return new ResponseEntity<>(obj, HttpStatus.CREATED);
+    @Autowired
+    AnalysisReportService ars;
+
+    @PostMapping("/api/report")
+    public ResponseEntity<AnalysisReport> create(@RequestBody AnalysisReport ae) {
+        return new ResponseEntity<>(ars.addReport(ae), HttpStatus.CREATED);
     }
 
-    @GetMapping("/api/user")
-    public ResponseEntity<List<User>> getAll() {
-        List<User> obj = us.getAllUser();
+    @GetMapping("/api/report")
+    public ResponseEntity<List<AnalysisReport>> getAll() {
+        List<AnalysisReport> obj = ars.getAll();
         return new ResponseEntity<>(obj, HttpStatus.OK);
     }
-
 }

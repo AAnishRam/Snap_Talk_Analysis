@@ -14,36 +14,21 @@ public class UserService {
     @Autowired
     UserRepo ur;
 
-    public User create(User ue) {
-        return ur.save(ue);
+    public User registerUser(User user) {
+
+        String email = user.getEmail();
+
+        boolean userFlag = email.startsWith("7278") && email.endsWith("@skct.edu.in");
+        if (userFlag) {
+            user.setRole("student");
+            return ur.save(user);
+        } else {
+            return null;
+        }
     }
 
-    public List<User> getAll() {
+    public List<User> getAllUser() {
         return ur.findAll();
-    }
-
-    public User update(User ue) {
-        if (ur.existsById(ue.getUserId())) {
-            return ur.save(ue);
-        } else {
-            throw new RuntimeException("User not found");
-        }
-    }
-
-    public User getById(int id) {
-        return ur.findById(id).orElse(null);
-    }
-
-    public void delete(int id) {
-        if (ur.existsById(id)) {
-            ur.deleteById(id);
-        } else {
-            throw new RuntimeException("User not found");
-        }
-    }
-
-    public User getByEmail(String email) {
-        return ur.findByEmail(email);
     }
 
 }

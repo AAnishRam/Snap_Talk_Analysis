@@ -2,8 +2,8 @@ package com.example.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.demo.model.User;
+import com.example.demo.model.Video;
 
-public interface UserRepo extends JpaRepository<User, Integer> {
+public interface VideoRepo extends JpaRepository<Video, Integer> {
 
 }

@@ -3,11 +3,11 @@ package com.example.demo.model;
 import jakarta.persistence.*;
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "admins")
+public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,37 +16,29 @@ public class User {
     private String lastName;
     private String email;
     private String password;
-    private double rating;
-    private int points;
     private String role;
 
-    @OneToMany(mappedBy = "user")
-    private Set<Task> tasks;
+    @OneToMany(mappedBy = "admin")
+    @JsonManagedReference
+    private Set<Task> assignedTasks;
 
-    @ManyToOne
-    @JoinColumn(name = "admin_id")
-    @JsonBackReference
-    private Admin admin;
+    @OneToMany(mappedBy = "admin")
+    @JsonManagedReference
+    private Set<User> users;
 
-    @OneToMany(mappedBy = "user")
-    private Set<Video> videos;
-
-    public User() {
+    public Admin() {
     }
 
-    public User(Long id, String firstName, String lastName, String email, String password, double rating, int points,
-            String role, Set<Task> tasks, Admin admin, Set<Video> videos) {
+    public Admin(Long id, String firstName, String lastName, String email, String password, String role,
+            Set<Task> assignedTasks, Set<User> users) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.rating = rating;
-        this.points = points;
         this.role = role;
-        this.tasks = tasks;
-        this.admin = admin;
-        this.videos = videos;
+        this.assignedTasks = assignedTasks;
+        this.users = users;
     }
 
     public Long getId() {
@@ -89,22 +81,6 @@ public class User {
         this.password = password;
     }
 
-    public double getRating() {
-        return rating;
-    }
-
-    public void setRating(double rating) {
-        this.rating = rating;
-    }
-
-    public int getPoints() {
-        return points;
-    }
-
-    public void setPoints(int points) {
-        this.points = points;
-    }
-
     public String getRole() {
         return role;
     }
@@ -113,28 +89,19 @@ public class User {
         this.role = role;
     }
 
-    public Set<Task> getTasks() {
-        return tasks;
+    public Set<Task> getAssignedTasks() {
+        return assignedTasks;
     }
 
-    public void setTasks(Set<Task> tasks) {
-        this.tasks = tasks;
+    public void setAssignedTasks(Set<Task> assignedTasks) {
+        this.assignedTasks = assignedTasks;
     }
 
-    public Admin getAdmin() {
-        return admin;
+    public Set<User> getUsers() {
+        return users;
     }
 
-    public void setAdmin(Admin admin) {
-        this.admin = admin;
+    public void setUsers(Set<User> users) {
+        this.users = users;
     }
-
-    public Set<Video> getVideos() {
-        return videos;
-    }
-
-    public void setVideos(Set<Video> videos) {
-        this.videos = videos;
-    }
-
 }

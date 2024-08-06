@@ -10,24 +10,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.User;
-import com.example.demo.service.UserService;
+import com.example.demo.model.Video;
+import com.example.demo.service.VideoService;
 
 @RestController
-public class UserController {
-    @Autowired
-    UserService us;
+public class VideoController {
 
-    @PostMapping("/api/user")
-    public ResponseEntity<User> create(@RequestBody User ue) {
-        User obj = us.registerUser(ue);
-        return new ResponseEntity<>(obj, HttpStatus.CREATED);
+    @Autowired
+    VideoService vs;
+
+    @PostMapping("/api/video")
+    public ResponseEntity<Video> create(@RequestBody Video ve) {
+        return new ResponseEntity<>(vs.addVideo(ve), HttpStatus.CREATED);
     }
 
-    @GetMapping("/api/user")
-    public ResponseEntity<List<User>> getAll() {
-        List<User> obj = us.getAllUser();
+    @GetMapping("/api/video")
+    public ResponseEntity<List<Video>> getAll() {
+        List<Video> obj = vs.getAllVideo();
         return new ResponseEntity<>(obj, HttpStatus.OK);
     }
-
 }

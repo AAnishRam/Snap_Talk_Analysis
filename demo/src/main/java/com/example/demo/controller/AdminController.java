@@ -9,25 +9,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.example.demo.model.User;
-import com.example.demo.service.UserService;
+import com.example.demo.model.Admin;
+import com.example.demo.service.AdminService;
 
 @RestController
-public class UserController {
+public class AdminController {
     @Autowired
-    UserService us;
+    AdminService as;
 
-    @PostMapping("/api/user")
-    public ResponseEntity<User> create(@RequestBody User ue) {
-        User obj = us.registerUser(ue);
+    @PostMapping("/api/admin")
+    public ResponseEntity<Admin> create(@RequestBody Admin ae) {
+        Admin obj = as.addAdminn(ae);
+
         return new ResponseEntity<>(obj, HttpStatus.CREATED);
     }
 
-    @GetMapping("/api/user")
-    public ResponseEntity<List<User>> getAll() {
-        List<User> obj = us.getAllUser();
-        return new ResponseEntity<>(obj, HttpStatus.OK);
+    @GetMapping("/api/admin")
+    public ResponseEntity<List<Admin>> getAll() {
+        List<Admin> obj = as.getAllAdmin();
+        return new ResponseEntity<>(obj, HttpStatus.CREATED);
     }
-
 }
