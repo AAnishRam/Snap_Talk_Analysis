@@ -1,0 +1,148 @@
+@media (max-width: 500px) {
+  .signin__right {
+    display: none;
+  }
+  .signin {
+    background-color: antiquewhite;
+  }
+}
+
+.signin {
+  display: flex;
+  flex-direction: row;
+  padding: 5vh;
+}
+.signin__right {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.signin__right img {
+  width: 100%;
+  height: 100%;
+}
+
+.signin__left {
+  margin-left: 100px;
+  align-self: center;
+  background-color: white;
+  padding: 40px;
+  padding: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+.signin__left__title__h1 {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.signin__left__form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  align-self: center;
+}
+
+.signin__left__form__email__title {
+  font-size: 30px;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+  margin-bottom: 10px;
+}
+
+.signin__left__form__password__title {
+  font-size: 30px;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+  margin-bottom: 10px;
+}
+
+.signin__left__form__password__input {
+  position: relative;
+}
+
+.signin__left__form__password__input input {
+  width: 100%;
+  padding-right: 40px; /* Add padding to avoid overlap with the icon */
+}
+
+.signin__left__form__password__icon {
+  position: absolute;
+  top: 40%;
+  right: 15px; /* Adjust this value based on your design */
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+}
+
+.signin__left__form input {
+  height: 60px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.signin__left__form__forget__text {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.signin__left__form__button {
+  height: 100px;
+  align-self: center;
+}
+
+.signin__left__form__button button {
+  margin-top: 30px;
+  align-items: center;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  width: 300px;
+  background-color: #ff7a7b;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.signin__left__form__or {
+  margin-top: 20px;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.signin__left__form__or__text {
+  width: 150px;
+  text-align: center;
+}
+
+.signin__left__form__icon {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.signin__left__form__icon__png {
+  width: 50px;
+  margin: 30px;
+}
+
+.signin__left__form__dont {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+.sign-up {
+  color: blue;
+  cursor: pointer;
+}
